@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Find it</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary mb-3">
+      <div class="container">
+        <span class="navbar-brand">Findit</span>
+      </div>
+    </nav>
+
+    <div id="search-container" class="container">
+      <div id="search" class="card card-body bg-light mb-2">
+        <h4></h4>
+        <form id="search-form">
+          <div class="form-group">
+            <input type="text" id="search-input" class="form-control mb-3" placeholder="Search term...">
+          </div>
+          <div class="form-check form-check-inline">
+            Sorted by:
+            <input type="radio" class="form-check-input ml-2" name="sortby" value="relevance" checked="">
+            <label class="form-check-label">
+              Relevance
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" class="form-check-input" name="sortby" value="new">
+            <label class="form-check-label">
+              Latest
+            </label>
+          </div>
+          <h5 class="mt-2">Limit: </h5>
+          <div class="form-group">
+            <select name="limit" id="limit" class="form-control">
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="25" selected="">25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+          <button class="btn btn-dark btn-block mt-4">Search</button>
+        </form>
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <script src="/reddit-search.b1f8bf10.js"></script>
+  </body>
+</html>
